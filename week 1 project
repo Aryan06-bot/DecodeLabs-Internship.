@@ -1,0 +1,50 @@
+def main():
+    print("==================================================")
+    print("        DECODELABS INDUSTRIAL TRAINING - PROJECT 1        ")
+    print("                 RULE-BASED AI CHATBOT                    ")
+    print("==================================================")
+    print("System active. Type your message below (Type 'exit' to quit).\n")
+
+    # Keep running the chatbot until the user stops it
+    while True:
+        # Take input from the user
+        raw_input = input('You: ')
+        
+        # Convert text to lowercase and remove spaces from start/end
+        clean_input = raw_input.lower().strip()
+        
+        # If the user presses enter without typing, ask again
+        if clean_input == "":
+            continue
+            
+        # Stop the chatbot if the user types exit
+        if clean_input == 'exit':
+            print("Chatbot: Session terminated. Goodbye!")
+            break
+            
+        # Check the user input using a clean if-elif-else ladder
+        if clean_input == 'hello' or clean_input == 'hi':
+            print("Chatbot: Hello! Welcome to the team. How can I help you today?\n")
+            
+        elif clean_input == 'how are you':
+            print("Chatbot: I am operating smoothly and running at peak efficiency. Hope you are doing well too!\n")
+            
+        elif clean_input == 'what is your purpose':
+            print("Chatbot: My purpose is to process predefined inputs and provide instant, rule-based outputs.\n")
+            
+        elif clean_input == 'who made you':
+            print("Chatbot: I was developed as part of the DecodeLabs Industrial Training Program - Project 1.\n")
+            
+        elif clean_input == 'what is a white box':
+            print("Chatbot: A white-box model ensures 100% traceability where every input maps directly to an output.\n")
+            
+        elif clean_input == 'help':
+            print("Chatbot: Available commands: hello, hi, how are you, what is your purpose, who made you, what is a white box, exit\n")
+            
+        else:
+            # Default message if the user types an unknown question
+            print("Chatbot: Warning: Command not recognized. Type 'help' to see valid commands.\n")
+
+if __name__ == "__main__":
+    main()
+    
