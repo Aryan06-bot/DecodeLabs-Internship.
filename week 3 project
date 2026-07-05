@@ -1,0 +1,36 @@
+# ==============================
+# Week 3 - AI Recommendation System
+# DecodeLabs Internship
+# ==============================
+
+recommendations = {
+    "Python": ["Basics", "OOP", "Projects"],
+    "Web Development": ["HTML", "CSS", "JavaScript"],
+    "AI": ["Machine Learning", "Deep Learning", "NLP"],
+    "Data Science": ["Pandas", "NumPy", "Visualization"],
+    "Cyber Security": ["Ethical Hacking", "Networking", "Security Basics"]
+}
+
+print("\n===== AI RECOMMENDATION SYSTEM =====")
+
+while True:
+
+    print("\nAvailable Categories:")
+    for i in recommendations:
+        print("-", i)
+
+    choice = input("\nEnter your interest: ").title()
+
+    if choice in recommendations:
+        print("\nRecommended Learning Path:")
+        for item in recommendations[choice]:
+            print("•", item)
+    else:
+        print("No recommendations found!")
+
+    again = input("\nDo you want another recommendation? (yes/no): ").lower()
+
+    if again != "yes":
+        break
+
+print("\nThank you! Project completed.")
